@@ -21,7 +21,7 @@ Where:
 
 Given the following video
 
-[!video](video.mp4)
+[!video](./cea608-cea608.fV300_with_cc1_and_cc3.mp4)
 
 and the following command
 
@@ -29,6 +29,6 @@ and the following command
 ffmpeg -i video.mp4 -frames 1 -vf "select=not(mod(n\,300)),scale=224:126,tile=5x6" tile.png
 ```
 
-It will produce a `tile.png` image capturing every 300th frame. It contains at maximum 35 tiles (5x7) where each tile has a size of 320x200px.
+It will produce a `tile.png` image capturing every 300th frame. It contains at maximum 30 tiles (5x6) where each tile has a size of 224x126px.
 
-[!tile image](tile.png)
+[!tile image](./pckimage-0-224-126.png)
