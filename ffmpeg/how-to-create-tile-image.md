@@ -19,8 +19,16 @@ Where:
 
 ## Example
 
+Given the following video
+
+[!video](video.mp4)
+
+and the following command
+
 ```
-ffmpeg -i video.mp4 -frames 1 -vf "select=not(mod(n\,300)),scale=320,200,tile=5x7" tile.png
+ffmpeg -i video.mp4 -frames 1 -vf "select=not(mod(n\,300)),scale=224:126,tile=5x6" tile.png
 ```
 
 It will produce a `tile.png` image capturing every 300th frame. It contains at maximum 35 tiles (5x7) where each tile has a size of 320x200px.
+
+[!tile image](tile.png)
