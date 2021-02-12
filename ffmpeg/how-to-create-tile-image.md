@@ -19,11 +19,7 @@ Where:
 
 ## Example
 
-Given the following video
-
-![video](./cea608-cea608.fV300_with_cc1_and_cc3.mp4)
-
-and the following command
+Given the [video](./cea608-cea608.fV300_with_cc1_and_cc3.mp4) and the following command
 
 ```
 ffmpeg -i video.mp4 -frames 1 -vf "select=not(mod(n\,300)),scale=224:126,tile=5x6" tile.png
